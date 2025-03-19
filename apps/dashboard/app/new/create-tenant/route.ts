@@ -1,7 +1,9 @@
 import { auth } from "@/lib/auth/server";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { switchOrg } from "@/lib/auth/actions";
 import { redirect } from "next/navigation";
+
+export const dynamic = "force-dynamic";
 
 export async function GET(_request: NextRequest) {
   const user = await auth.getCurrentUser();

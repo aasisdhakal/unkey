@@ -6,6 +6,8 @@ import { Empty } from "@unkey/ui";
 import { redirect } from "next/navigation";
 import Stripe from "stripe";
 
+export const dynamic = "force-dynamic";
+
 type Props = {
   searchParams: {
     session_id?: string;
